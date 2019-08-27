@@ -1,0 +1,20 @@
+<phpunit
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        verbose="true"
+        stopOnFailure="false"
+        stopOnError="false"
+        processIsolation="false"
+        backupGlobals="false"
+        >
+    <testsuites>
+        <testsuite name="WorldTradingData component test Suite">
+            <directory suffix="Test.php">.</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <log type="coverage-clover" target="../build/logs/clover.xml"/>
+    </logging>
+</phpunit>
