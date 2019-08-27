@@ -1,0 +1,18 @@
+{
+    "name": "arequena93/world-trading-data-api",
+    "description": "World Trading Data API client",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "api",
+        "alpha-vantage",
+        "alphavantage"
+    ],
+    "authors": [
+        {
+            "name": "arequena93",
+            "email": "antoni.requena@gmail.com"
+        }
+    ],
+    "require": {}
+}
