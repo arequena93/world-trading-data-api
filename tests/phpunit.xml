@@ -1,5 +1,6 @@
 <phpunit
         colors="true"
+        bootstrap="../vendor/autoload.php"
         convertErrorsToExceptions="true"
         convertNoticesToExceptions="true"
         convertWarningsToExceptions="true"
@@ -10,7 +11,7 @@
         backupGlobals="false"
         >
     <testsuites>
-        <testsuite name="WorldTradingData component test Suite">
+        <testsuite name="WorldTradingData component test suite">
             <directory suffix="Test.php">.</directory>
         </testsuite>
     </testsuites>
