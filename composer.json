@@ -5,14 +5,21 @@
     "license": "MIT",
     "keywords": [
         "api",
-        "alpha-vantage",
-        "alphavantage"
+        "world-trading-data",
+        "worldtradingdata"
     ],
+    "autoload": {
+        "psr-4": {
+            "WorldTradingData\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "arequena93",
             "email": "antoni.requena@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "^7.0"
+    }
 }
