@@ -25,20 +25,22 @@ class Client
      * @return Api\AbstractApi
      * @throws Exception\InvalidArgumentException
      */
-    public function api(string $name)//: Api\AbstractApi
+    public function api(string $name): Api\AbstractApi
     {
         $name = $this->getApiName($name);
 
         switch ($name) {
             case 'historical':
-                echo 'api/historical';
+                $api = new Api\Historical($this->options);
                 break;
             
             default:
                 throw new Exception\InvalidArgumentException(
-                    sprintf('Undefined api instance called: "%s"', $name)
+                    sprintf('Invalid api call: "%s"', $name)
                 );
         }
+
+        return $api;
     }
 
     /**
@@ -46,7 +48,7 @@ class Client
      * @param array $arguments
      * @return Api\AbstractApi
      */
-    public function __call(string $name, array $arguments)//: Api\AbstractApi
+    public function __call(string $name, array $arguments): Api\AbstractApi
     {
         try {
 
@@ -55,7 +57,7 @@ class Client
         } catch (Exception\InvalidArgumentException $exception) {
 
             throw new Exception\BadMethodCallException(
-                sprintf('Undefined method called: "%s"', $name)
+                sprintf('Invalid method call: "%s"', $name)
             );
         }
     }
