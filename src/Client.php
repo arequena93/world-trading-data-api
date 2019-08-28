@@ -33,6 +33,10 @@ class Client
             case 'historical':
                 $api = new Api\Historical($this->options);
                 break;
+
+            case 'forex':
+                $api = new Api\Forex($this->options);
+                break;
             
             default:
                 throw new Exception\InvalidArgumentException(
