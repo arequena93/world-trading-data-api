@@ -38,21 +38,13 @@ class AbstractApi
 
     /**
      * @param string $functionName
-     * @param null|string $symbolName
      * @param array $params
      * @return array
      */
-    protected function get(string $functionName, string $symbolName = null, array $params = [])
+    protected function get(string $functionName, array $params = [])
     {
-        unset($params['functions'], $params['function'], $params['apikey']);
-
-        if (null !== $symbolName) {
-            $basicData['symbol'] = $symbolName;
-        }
-
         $httpQuery = http_build_query(
             array_merge(
-                $basicData,
                 $params,
                 [
                     'api_token' => $this->options->getApiKey(),
