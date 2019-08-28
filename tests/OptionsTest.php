@@ -4,7 +4,6 @@ use WorldTradingData\Options;
 
 class OptionsTest extends \PHPUnit\Framework\TestCase
 {
-
     public function testApiKey()
     {
         $option = new Options();
