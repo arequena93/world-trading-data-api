@@ -2,21 +2,20 @@
 
 [![Build Status](https://travis-ci.org/arequena93/world-trading-data-api.svg?branch=master)](https://travis-ci.org/arequena93/world-trading-data-api)
 
-PHP-Client for the World Tranding Data service acting as a wrapper  [World Trading Data](https://www.worldtradingdata.com/).
+PHP-Client (wrapper) for the [World Trading Data](https://www.worldtradingdata.com/) service.
 
 ## Requirements:
 - PHP 7.0+
-- composer (https://getcomposer.org/download/)
-- WorldTradingData Key, that you get @ [WorldTradingData-Api-Key](https://www.worldtradingdata.com/register)
+- Composer (https://getcomposer.org/download/)
+- WorldTradingData API key: [WorldTradingData-Api-Key](https://www.worldtradingdata.com/register)
 
-## Install
+## Installation
 
 ```
 php composer.phar require arequena93/world-trading-data-api
 ```
 
-
-## How to use it?
+## Usage
 
 ```
 $option = new WorldTradingData\Options();
