@@ -29,8 +29,8 @@ class Historical extends AbstractApi
     {
         return $this->get(
             'history',
-            $symbolName,
             [
+                'symbol' => $symbolName,
                 'date_from' => $dateFrom,
                 'date_to' => $dateTo,
                 'sort' => $sort,
@@ -52,8 +52,8 @@ class Historical extends AbstractApi
     {
         return $this->get(
             'history_multi_single_day',
-            $symbolName,
             [
+                'symbol' => $symbolName,
                 'date' => $date,
                 'sort' => $sort,
                 'output' => $output,
