@@ -39,4 +39,26 @@ class Historical extends AbstractApi
             ]
         );
     }
+
+    /**
+     * @param string $symbolName
+     * @param string $date
+     * @param string $sort
+     * @param string $output
+     * @param string $alterFormat
+     * @return array
+     */
+    public function multiSingleDayHistory(string $symbolName, string $date, string $sort = self::SORT_BY_DATE_NEWEST, string $output = self::DATA_TYPE_JSON, string $alterFormat = self::ALTER_FORMAT_OUTPUT)
+    {
+        return $this->get(
+            'history_multi_single_day',
+            $symbolName,
+            [
+                'date' => $date,
+                'sort' => $sort,
+                'output' => $output,
+                'formatted' => $alterFormat
+            ]
+        );
+    }
 }
