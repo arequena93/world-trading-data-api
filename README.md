@@ -31,7 +31,7 @@ $client = new WorldTradingData\Client($option);
     <tr>
         <th colspan='2' align='center'>WTD functions</th>
         <th align='center'>Example usage</th>
-        <th align='center'>Parameters</th>
+        <th align='center'>Parameters (required in bold)</th>
     </tr>
     <tr>
         <th rowspan='2'>Real Time Market Data</th>
@@ -39,7 +39,7 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->realtime()->stockAndIndexRealTime('AAPL');</code></td>
         <td>
             <ul>
-                <li>symbol (required)</li>
+                <li><b>symbol</b></li>
                 <li>sort_order</li>
                 <li>sort_by</li>
                 <li>output</li>
@@ -51,7 +51,7 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->realtime()->mutualFundRealTime('AAAAX');</code></td>
         <td>
             <ul>
-                <li>symbol (required)</li>
+                <li><b>symbol</b></li>
                 <li>sort_order</li>
                 <li>sort_by</li>
                 <li>output</li>
@@ -70,7 +70,7 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->historical()->fullHistory('ITX.MC');</code></td>
         <td>
             <ul>
-                <li>symbol (required)</li>
+                <li><b>symbol</b></li>
                 <li>date_from</li>
                 <li>date_to</li>
                 <li>sort</li>
@@ -84,8 +84,8 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->historical()->multiSingleDayHistory('AAPL,ITX.MC', '2018-01-02');</code></td>
         <td>
             <ul>
-                <li>symbol (required)</li>
-                <li>date (required)</li>
+                <li><b>symbol</b></li>
+                <li><b>date</b></li>
                 <li>sort</li>
                 <li>output</li>
                 <li>formatted</li>
@@ -98,7 +98,7 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->forex()->realTime('EUR');</code></td>
         <td>
             <ul>
-                <li>base (required)</li>
+                <li><b>base</b></li>
             </ul>
         </td>
     </tr>
@@ -107,8 +107,8 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->forex()->historical('USD', 'GBP');</code></td>
         <td>
             <ul>
-                <li>base (required)</li>
-                <li>convert_to (required)</li>
+                <li><b>base</b></li>
+                <li><b>convert_to</b></li>
                 <li>date_from</li>
                 <li>date_to</li>
                 <li>sort</li>
@@ -122,8 +122,8 @@ $client = new WorldTradingData\Client($option);
         <td><code>$client->forex()->singleDayHistory('USD', '2018-08-31');</code></td>
         <td>
             <ul>
-                <li>base (required)</li>
-                <li>date (required)</li>
+                <li><b>base</b></li>
+                <li><b>date</b></li>
                 <li>output</li>
                 <li>formatted</li>
             </ul>
