@@ -30,19 +30,33 @@ $client = new WorldTradingData\Client($option);
   <tbody>
     <tr>
         <th colspan='2' align='center'>WTD functions</th>
-        <th align='center'>Usage</th>
+        <th align='center'>Example usage</th>
         <th align='center'>Parameters</th>
     </tr>
     <tr>
         <th rowspan='2'>Real Time Market Data</th>
         <td>Stock and index real time</td>
         <td><code>$client->realtime()->stockAndIndexRealTime('AAPL');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>symbol (required)</li>
+                <li>sort_order</li>
+                <li>sort_by</li>
+                <li>output</li>
+            </ul>
+        </td>
     </tr>
         <tr>
         <td>Mutual fund real time</td>
         <td><code>$client->realtime()->mutualFundRealTime('AAAAX');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>symbol (required)</li>
+                <li>sort_order</li>
+                <li>sort_by</li>
+                <li>output</li>
+            </ul>
+        </td>
     </tr>
     <tr>
         <th>Intraday Market Data</th>
@@ -54,28 +68,66 @@ $client = new WorldTradingData\Client($option);
         <th rowspan='2'>Historical Market Data</th>
         <td>Full history</td>
         <td><code>$client->historical()->fullHistory('ITX.MC');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>symbol (required)</li>
+                <li>date_from</li>
+                <li>date_to</li>
+                <li>sort</li>
+                <li>output</li>
+                <li>formatted</li>
+            </ul>
+        </td>
     </tr>
         <tr>
         <td>Multi single day history</td>
         <td><code>$client->historical()->multiSingleDayHistory('AAPL,ITX.MC', '2018-01-02');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>symbol (required)</li>
+                <li>date (required)</li>
+                <li>sort</li>
+                <li>output</li>
+                <li>formatted</li>
+            </ul>
+        </td>
     </tr>
     <tr>
         <th rowspan='3'>Forex</th>
         <td>Real time</td>
         <td><code>$client->forex()->realTime('EUR');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>base (required)</li>
+            </ul>
+        </td>
     </tr>
     <tr>
         <td>Historical</td>
         <td><code>$client->forex()->historical('USD', 'GBP');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>base (required)</li>
+                <li>convert_to (required)</li>
+                <li>date_from</li>
+                <li>date_to</li>
+                <li>sort</li>
+                <li>output</li>
+                <li>formatted</li>
+            </ul>
+        </td>
     </tr>
         <tr>
         <td>Single day history</td>
         <td><code>$client->forex()->singleDayHistory('USD', '2018-08-31');</code></td>
-        <td>&nbsp;</td>
+        <td>
+            <ul>
+                <li>base (required)</li>
+                <li>date (required)</li>
+                <li>output</li>
+                <li>formatted</li>
+            </ul>
+        </td>
     </tr>
   </tbody>
 </table>
