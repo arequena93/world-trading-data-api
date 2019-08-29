@@ -37,6 +37,10 @@ class Client
             case 'forex':
                 $api = new Api\Forex($this->options);
                 break;
+
+            case 'realtime':
+                $api = new Api\RealTime($this->options);
+                break;
             
             default:
                 throw new Exception\InvalidArgumentException(
