@@ -8,6 +8,7 @@
         "world-trading-data",
         "worldtradingdata"
     ],
+    "homepage": "https://github.com/arequena93/world-trading-data-api",
     "autoload": {
         "psr-4": {
             "WorldTradingData\\": "src/"
