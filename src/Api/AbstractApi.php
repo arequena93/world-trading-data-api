@@ -55,7 +55,6 @@ class AbstractApi
         $response = $this->client->get($this->getApiUri($functionName) . $httpQuery);
 
         $result = json_decode($response->getBody()->getContents(), true);
-        var_dump($result);
 
         if (isset($result['Message'])) {
             throw new RuntimeException($result['Message']);
